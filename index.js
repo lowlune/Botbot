@@ -66,7 +66,7 @@ client.on("message", msg =>{
           msg.channel.send(rpgOznam)
           break;
         case "peter":
-          msg.channel.bulkDelete(1);
+          msg.channel.bulkDelete(2);
           break;
 
     }
