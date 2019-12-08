@@ -27,7 +27,7 @@ client.on("message", msg =>{
     let args = msg.content.substring(prefix.lenght).split(" ");
 
     switch (args[1]) {
-      /*  case "kill":
+       case "kill":
           if(!args[2]) return msg.channel.send("A koho chceš zabiť?");
           let obet = args[2];
           var killQuoteNumber = Math.floor(Math.random() * 8);
@@ -38,7 +38,7 @@ client.on("message", msg =>{
           .setTitle("Navštív instagram spsit.memes")
           .setDescription("https://www.instagram.com/spsit.memes/")
           msg.channel.sendEmbed(instaEmbed)
-        break;*/
+        break;
         case "help":
           const help = new Discord.RichEmbed()
           .setColor(0xFFA31A)
@@ -48,7 +48,7 @@ client.on("message", msg =>{
         break;
         case "cau":
           msg.channel.send("Nazdar ty banán!")
-        break;/*
+        break;
         case "kos":
           if(!args[2]) return msg.channel("Musíš zadať koľko správ chceš vymazať!")
           msg.channel.bulkDelete(args[2]);
@@ -64,7 +64,7 @@ client.on("message", msg =>{
           .setDescription("Na hre sa stále precuje, bude vydaná hneď ako ju dokončíme \n *Vedenie ŠitCord*")
           .setFooter("pre viac príkazov napíš **sit help**")
           msg.channel.send(rpgOznam)
-          break;*/
+          break;
 
 
     }
