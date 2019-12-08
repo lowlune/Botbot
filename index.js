@@ -3,9 +3,9 @@ const prefix = "sit";
 const client = new Discord.Client();
 
 
-var killQuote = [" umrel na päťku od Vnukovej!",
+var killQuote = [" umrel na päťku od Lenky!",
 " prišiel na to že, chodí na SPŠIT a ukončil to sám!",
-" chytil debilitu od Sovíka!",
+" chytil debilitu od Soplíka!",
 " bol pristihnutý pri tom ako odchádza po druhej hodine!",
 " prišiel na nečakanú písomku!",
 " bol na smrť ubitý Jarom!",
