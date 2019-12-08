@@ -1,7 +1,10 @@
 const Discord = require("discord.js");
 const prefix = "sit";
 const client = new Discord.Client();
+const ytdl = require("ytdl-core");
 
+
+var servers = {};
 
 var killQuote =
 [" umrel na päťku od Lenky!",
@@ -56,7 +59,7 @@ client.on("message", msg =>{
           msg.channel.send("Nazdar ty banán!")
         break;
         case "kos":
-          if(!args[2]) return msg.channel("Musíš zadať koľko správ chceš vymazať!")
+          if(!args[2]) return msg.channel("❌Musíš zadať koľko správ chceš vymazať!")
           msg.channel.bulkDelete(args[2]);
           msg.channel.send("Bolo vymazaných " + args[2] + " správ!")
           .then(msg =>{
@@ -72,6 +75,50 @@ client.on("message", msg =>{
           msg.channel.send(rpgOznam)
           break;
 
+      case "play":
+
+      function play(connection, msg){
+        var server = servers[msg.guild.id];
+
+        server.dispatcher = connection.playStream(ytdl(server.queue[0], {filter: "audioonly"}));
+
+        server.queue.shift();
+
+        server.dispatcher.on("end", function(){
+          if(server.queue[0]){
+            play(connection, msg)
+          }else{
+            connection.disconnect();
+          }
+        });
+
+      }
+
+        if(!args[2]){
+          const playError = new Discord.RichEmbed()
+          .setDescription("❌Na to aby si mohol spustiť hudbu potrebuješ pridať link, napr. sit play [URL]")
+          .setTitle("Chyba")
+          msg.channel.sendEmbed(playError);
+          return;
+        }
+        if(!msg.member.voiceChannel){
+          msg.channel.send("❌Nemôžeš pustiť hudbu keď nie si vo voice!");
+          return;
+        }
+        if(!servers[msg.guild.id]) servers[msg.guild.id] = {
+         queue: []
+        }
+        var server = servers[msg.guild.id];
+
+        server.queue.push(args[2]);
+
+        if(!msg.guild.voiceConnection) msg.member.voiceChannel.join().then(function(connection)){
+          play(connection, msg);
+        }
+
+
+
+      break;
 
     }
 });
