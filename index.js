@@ -38,14 +38,14 @@ client.on("message", msg =>{
           .setTitle("Navštív instagram spsit.memes")
           .setDescription("https://www.instagram.com/spsit.memes/")
           msg.channel.sendEmbed(instaEmbed)
-        break;
+        break;*/
         case "help":
           const help = new Discord.RichEmbed()
           .setColor(0xFFA31A)
           .setDescription("Všetky potrebné príkazy k ŠitBotovi:")
           .setFooter("Príkazy: cau, help, insta, kill [meno], kos [cislo], rpg");
           msg.channel.sendEmbed(help);
-        break;*/
+        break;
         case "cau":
           msg.channel.send("Nazdar ty banán!")
         break;/*
