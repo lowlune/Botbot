@@ -65,9 +65,7 @@ client.on("message", msg =>{
           .setFooter("pre viac príkazov napíš sit help")
           msg.channel.send(rpgOznam)
           break;
-        case "peter":
-          msg.channel.bulkDelete(2);
-          break;
+        
 
     }
 });
