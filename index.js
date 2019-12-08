@@ -3,14 +3,19 @@ const prefix = "sit";
 const client = new Discord.Client();
 
 
-var killQuote = [" umrel na päťku od Lenky!",
+var killQuote =
+[" umrel na päťku od Lenky!",
 " prišiel na to že, chodí na SPŠIT a ukončil to sám!",
 " chytil debilitu od Soplíka!",
 " bol pristihnutý pri tom ako odchádza po druhej hodine!",
 " prišiel na nečakanú písomku!",
 " bol na smrť ubitý Jarom!",
 " bol zavolaný školským rozhlasom do kabinetu a už o ňom nikto nepočul!",
-" bol zrazený autom na ceste do Lidla!"];
+" bol zrazený autom na ceste do Lidla!",
+" umrel keď sa snažil predbehnúť na obedoch!",
+" stojí vo fronte na bagety do dnes!",
+" povedal že ŠitCord je napiču...",
+" neprežil deň bez žiadneho suplovania!"];
 
 
 
@@ -30,7 +35,7 @@ client.on("message", msg =>{
        case "kill":
           if(!args[2]) return msg.channel.send("A koho chceš zabiť?");
           let obet = args[2];
-          var killQuoteNumber = Math.floor(Math.random() * 8);
+          var killQuoteNumber = Math.floor(Math.random() * 12);
           msg.channel.send(args[2] + killQuote[killQuoteNumber])
         break;
         case "insta":
@@ -65,7 +70,7 @@ client.on("message", msg =>{
           .setFooter("pre viac príkazov napíš sit help")
           msg.channel.send(rpgOznam)
           break;
-        
+
 
     }
 });
