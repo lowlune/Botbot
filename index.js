@@ -37,7 +37,7 @@ client.on("message", msg =>{
           if(!args[2]) return msg.channel.send("A koho chceš zabiť?");
           let obet = args[2];
           var killQuoteNumber = Math.floor(Math.random() * 13);
-          msg.channel.send(args[2] + killQuote)
+          msg.channel.send(obet + killQuote[killQuoteNumber])
         break;
         case "insta":
           const instaEmbed = new Discord.RichEmbed()
