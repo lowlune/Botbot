@@ -17,7 +17,7 @@ var killQuote =
 " povedal že ŠitCord je napiču...",
 " neprežil deň bez žiadneho suplovania!",
 " zomrel na zásah prúdom zo zle namontovanej zástrčky na intrákoch!"];
-
+var numberKillQuotes = killQuote.lenght;
 
 
 
@@ -36,8 +36,8 @@ client.on("message", msg =>{
        case "kill":
           if(!args[2]) return msg.channel.send("A koho chceš zabiť?");
           let obet = args[2];
-          var killQuoteNumber = Math.floor(Math.random() * 12);
-          msg.channel.send(args[2] + killQuote.lenght)
+          var killQuoteNumber = Math.floor(Math.random() * numberKillQuotes);
+          msg.channel.send(args[2] + killQuote)
         break;
         case "insta":
           const instaEmbed = new Discord.RichEmbed()
