@@ -25,7 +25,7 @@ client.on("message", msg =>{
     if(!msg.content.startsWith(prefix) || msg.author.bot) return;
 
     let args = msg.content.substring(prefix.lenght).split(" ");
-
+/*
     switch (args[1]) {
         case "kill":
           if(!args[2]) return msg.channel.send("A koho chceš zabiť?");
@@ -45,11 +45,11 @@ client.on("message", msg =>{
           .setDescription("Všetky potrebné príkazy k ŠitBotovi:")
           .setFooter("Príkazy: cau, help, insta, kill [meno], kos [cislo], rpg");
           msg.channel.sendEmbed(help);
-        break;
+        break;*/
         case "cau":
           msg.channel.send("Nazdar ty banán!")
         break;
-        case "kos":
+      /*  case "kos":
           if(!args[2]) return msg.channel("Musíš zadať koľko správ chceš vymazať!")
           msg.channel.bulkDelete(args[2]);
           msg.channel.send("Bolo vymazaných " + args[2] + " správ!")
@@ -65,7 +65,7 @@ client.on("message", msg =>{
           .setFooter("pre viac príkazov napíš **sit help**")
           msg.channel.send(rpgOznam)
           break;
-
+*/
 
     }
 });
