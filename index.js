@@ -67,7 +67,7 @@ client.on("message", msg =>{
         case "rpg":
           const rpgOznam = new Discord.RichEmbed()
           .setTitle("ŠIT RPG")
-          .setDescription("Na hre sa stále precuje, bude vydaná hneď ako ju dokončíme \n *Vedenie ŠitCord*")
+          .setDescription("Na hre sa stále pracuje, bude vydaná hneď ako ju dokončíme \n *Vedenie ŠitCord*")
           .setFooter("pre viac príkazov napíš sit help")
           msg.channel.send(rpgOznam)
           break;
