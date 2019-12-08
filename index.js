@@ -16,7 +16,7 @@ var killQuote = [" umrel na päťku od Vnukovej!",
 
 
 client.on("ready", () =>{
-    console.log(`${bot.user.username} is online!`)
+    console.log('online')
     bot.user.setGame("Uteká zo školy");
 });
 
