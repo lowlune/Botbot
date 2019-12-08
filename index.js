@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const prefix = "sit";
 const bot = new Discord.Client();
-const token = process.env.token;
+
 
 var killQuote = [" umrel na päťku od Vnukovej!",
 " prišiel na to že, chodí na SPŠIT a ukončil to sám!",
@@ -70,4 +70,4 @@ bot.on("message", msg =>{
     }
 });
 
-bot.login(token);
+bot.login(process.env.token);
