@@ -114,7 +114,7 @@ client.on("message", msg =>{
 
         if(!msg.guild.voiceConnection) msg.member.voiceChannel.join().then(function(connection){
           play(connection, msg);
-        }
+        })
 
 
 
