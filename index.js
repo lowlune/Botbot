@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const prefix = "sit";
-const bot = new Discord.Client();
+const client = new Discord.Client();
 
 
 var killQuote = [" umrel na päťku od Vnukovej!",
@@ -15,12 +15,12 @@ var killQuote = [" umrel na päťku od Vnukovej!",
 
 
 
-bot.on("ready", async () =>{
+client.on("ready", async () =>{
     console.log(`${bot.user.username} is online!`)
     bot.user.setGame("Uteká zo školy");
 });
 
-bot.on("message", msg =>{
+client.on("message", msg =>{
 
     if(!msg.content.startsWith(prefix) || msg.author.bot) return;
 
@@ -70,4 +70,4 @@ bot.on("message", msg =>{
     }
 });
 
-bot.login(process.env.token);
+client.login(process.env.token);
